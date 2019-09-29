@@ -1,0 +1,823 @@
+*{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    text-decoration: none;
+}
+*::-webkit-scrollbar-track
+{
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+    border-radius: 10px;
+    background-color: #F5F5F5;
+}
+
+*::-webkit-scrollbar
+{
+    width: 12px;
+    background-color: #F5F5F5;
+}
+
+*::-webkit-scrollbar-thumb
+{
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+    background-color: #555;
+}
+
+body{
+    background: #f9f9f9;
+}
+.navbar{
+    height: 128px;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: [ups]64px[upe los]64px[loe];
+    background: linear-gradient(45deg, #303f9f, #7b1fa2) !important
+}
+
+.navbar .upper{
+    grid-row: ups/upe;
+    grid-column: 1fr;
+    display: grid;
+    grid-template-columns: [logos] 20% [logoe] 1fr [sets] 500px [sete];
+    grid-template-rows: 1fr;
+}
+
+.navbar .upper .logo{
+    grid-column: logos/logoe;
+    grid-row: 1fr;  
+    overflow: hidden;
+}
+
+.navbar .upper .logo img{
+    width: 132px;
+    height: 64px;
+    margin-left: 70px;
+    float: left;
+}
+.navbar .upper .settings{
+    grid-column: sets/sete;
+    grid-row: 1fr;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.navbar .upper .settings .profile{
+    width: 50px;
+    height: 50px;
+    border: 1px solid white;
+    border-radius: 50%;
+    margin-top: 5px;
+    margin-right: 20px;
+    float: right;
+    transition: 0.2s all;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.navbar .upper .settings .profile:hover{
+    border: 1px solid silver;
+    cursor: pointer;
+}
+
+.navbar .upper .settings .profile img{
+    width: 50px;
+    height: 50px;
+}
+.navbar .upper .settings .setting{
+    padding: 10px;
+    border: 2px solid white;
+    border-radius: 20px;
+    color: white;
+    font-weight: bolder;
+    transition: 0.2s all;
+    height: 45px;
+    margin-top: 10px;
+    margin-right: 70px;
+}
+
+.navbar .upper .settings .setting:hover{
+    cursor: pointer;
+    color: silver;
+}
+
+.navbar .lower{
+    width: 100%;
+    grid-row: los/loe;
+    display: grid;
+    grid-template-columns: [sides] 18% [sidee emps]82%[empe];
+    grid-template-rows: 1fr;
+}
+
+.navbar .lower .directing{
+    grid-column: sides/sidee;
+    grid-row: 1fr;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: bolder;
+}
+
+.navbar .lower .search{
+    grid-column: sides/sidee;
+    grid-row: 1fr;
+    background: white;
+    border-right: 1px solid silver;
+    border-top: 1px solid silver;
+}
+
+.navbar .lower .employee{
+    grid-column: emps/empe;
+    overflow-x: auto;
+}
+.navbar .lower .avatar{
+    width: 50px;
+    height: 50px;
+    margin: 10px;
+    border: 1px solid yellow;
+    border-radius: 50%;
+    background: olive;
+    float: right;
+
+}
+
+.navbar .lower .avatar .sign{
+    width: 15px;
+    height: 15px;
+    border: 1px solid darkgreen;
+    background: green;
+    float: right;
+    border-radius: 50%;
+}
+
+.sidebar{
+    display: block;
+    position: fixed;
+    width: 20%;
+    height: calc(100vh - 128px);
+}
+
+.sidebar .btn{
+    width: 80%;
+    margin-left: 5%;
+    margin-top: 5%;
+
+}
+
+.sidebar .employee{
+    width: 80%;
+    height: 40%;
+    margin-left: 5%;
+    margin-top: 5%;
+    border: 1px solid silver;
+    border-radius: 10px;
+    background: white;
+}
+
+.sidebar .employee .heading{
+    width: 100%;
+    height: 10%;
+    text-align: center;
+    padding-top: 5px; 
+    border-radius: 10px 10px 0 0;
+}
+
+.sidebar .employeeOnline{
+    width: 100%;
+    height: 90%;
+    overflow-y: auto;
+}
+
+.sidebar .employeeOnline .employees{
+    display: grid;
+    grid-template-columns: [avs] 30% [ave names] 70% [namee];
+    grid-template-rows: 1fr;
+    width: 90%;
+    border: 1px solid silver;
+    margin: 10px;
+    padding: 5px;
+    font-size: 12px;
+    border-radius: 20px;
+    transition: 0.2s all;
+}
+
+.sidebar .employeeOnline .employees:hover{
+    background: silver;
+    cursor: pointer;
+}
+
+.sidebar .employeeOnline .employees .avatar{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: green;
+}
+
+.sidebar .employeeOnline .employees .name{
+    grid-column: names/namee;
+    grid-row: 1fr;
+    margin-top: 10px;
+}
+
+.sidebar .events{
+    width: 80%;
+    height: 39%;
+    margin-left: 5%;
+    margin-top: 5%;
+    border: 1px solid silver;
+    border-radius: 10px;
+    background: white;
+}
+
+.events .recentEvents{
+    width: 100%;
+    height: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.events .eventNodes{
+    width: 100%;
+    height: 85%;
+    overflow-y: auto;
+    color: black;
+}
+
+
+.events .eventNodes .eventNode{
+    width: 90%;
+    height: 80px;
+    margin-left: 5%;
+    margin-bottom: 10px;
+    border: 1px solid silver;
+    border-radius: 10px;
+    display: grid;
+    grid-template-columns: [names] 80% [namee time-s] 20% [time-e];
+    grid-template-rows: [nars] 40% [nare defs] 60% [defe];
+    transition: 0.2s all;
+}
+.events .eventNode:hover{
+    background: #d6d6d6
+}
+
+.events .eventNodes .eventNode .name{
+    grid-column: names/namee;
+    grid-row: nars/nare;
+    font-weight: bolder;
+    padding: 10px;
+}
+
+.events .eventNodes .eventNode .time{
+    grid-column: time-s/time-e;
+    grid-row: nars/nare;
+    font-size: 10px;
+    padding-top: 15px;
+    padding-right: 4px;
+    font-style: italic;
+}
+
+.events .eventNodes .eventNode .def{
+    grid-column: names/namee;
+    grid-row: defs/defe;
+    font-size: 12px;
+    padding: 10px;
+}
+
+
+.content{
+    display: block;
+    position: absolute;
+    width: 80%;
+    height: calc(100vh - 86px);
+    margin-left: 19%;
+    margin-top: 64px;
+    overflow-y: auto;
+    border: 1px solid silver;
+    background: white;
+    border-radius: 10px;
+    box-shadow: -1px 0px 5px 0px;
+}
+
+.content .search{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 8%;
+}
+
+.content .search input{
+    width: 70%;
+    background: white;
+    font-size: 14px;
+    padding-left: 5px;
+    border: 1px solid silver;
+    border-radius: 20px;
+    position: fixed;
+}
+
+.content .innerContent{
+    width: 100%;
+    height: 92%;
+}
+
+.notifContent{
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr [time-s] 10% [time-e];
+    grid-template-rows: 1fr;
+    margin-left: 50px;
+    border-bottom: 1px solid silver;
+    transition: 0.2s all;
+}
+
+
+.notifContent .notifInner{
+    grid-column: 1/2;
+    grid-row: 1fr;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: [ids] 25% [ide defs] 75% [defe];
+    padding-top: 5px;
+}
+
+.notifContent .notifInner .id{
+    grid-row: ids/ide;
+    width: 100%;
+    padding-left: 20px;
+    font-weight: bolder;
+}
+
+.notifContent .notifInner .innerContent{
+    grid-row: defs/defe;
+    width: 100%;
+    font-size: 14px;
+    padding-top: 10px;
+    padding-left: 10px;
+}
+
+.flowBuilder .navbar{
+    height: 64px;
+}
+.flowArea{
+    width: 100%;
+    height: calc(100vh - 64px);   
+    display: grid;
+    grid-template-columns: [mains] 80% [maine ops] 20% [ope];
+    grid-template-rows: [opes]100vh - 64px[opee];
+}
+
+.flowArea .mainSpace{
+    grid-column: mains/maine;
+    grid-row: 1fr;
+    overflow-y: auto;
+}
+
+.flowBuilder .operationManager{
+    width: 18%;
+    display: block;
+    position: fixed;
+    left: 81%;
+    z-index: 999999999999999;
+}
+
+.flowBuilder .operationManager h3{
+    margin-bottom: 100px;
+}
+
+.flowBuilder .operationManager #getApproval{
+    width: 100%;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.flowBuilder .operationManager #finish{
+    width: 100%;
+    margin-bottom: 50px;
+}
+
+.flowBuilder .operationManager .employee{
+    margin-bottom: 50px;
+}
+.flowBuilder .operationManager .footer{
+    width: 100%;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: gray;
+}
+.employeeArea{
+    display: block;
+    position: absolute;
+    width: 80%;
+    height: calc(100vh - 86px);
+    margin-left: 19%;
+    margin-top: -64px;
+    overflow-y: auto;
+    border: 1px solid silver;
+    background: white;
+    border-radius: 10px;
+    box-shadow: -1px 0px 5px 0px;
+}
+
+.employeeArea .header{
+    width: 100%;
+    height: 5%;
+    color: black;
+    font-size: 30px;
+}
+.employeeArea .header .fa{
+    padding-left: 20px;
+    transition: 0.2s all;
+}
+
+.employeeArea .header .fa:hover{
+    color: gray;
+    cursor: pointer;
+}
+
+.employeeArea .employeeCard{
+    width: 30%;
+    height: 200px;
+    border: 1px solid silver; 
+    background: #f9f9f9;
+    border-radius: 10px;
+    margin-left: 2.5%;
+    margin-top: 3vh;
+    float: left;
+    display: grid;
+    grid-template-columns: [img_s] 30% [img_e nms] 70% [nme];
+    grid-template-rows: [ups] 50% [upe deps] 25% [depe mails] 25% [maile];
+    box-shadow: -1px 0px 5px 0px;
+}
+
+.employeeArea .employeeCard .photo{
+    grid-column: img_s/img_e;
+    grid-row: ups/upe;
+    border-bottom:1px solid silver;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.employeeArea .employeeCard .photo img{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    border: 2px solid silver;
+}
+
+.employeeArea .employeeCard .empName{
+    grid-column: nms/nme;
+    grid-row: ups/upe;
+    font-size: 20px;
+    font-weight: bolder;
+    border-bottom: 1px solid silver;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.employeeArea .employeeCard .empDepartment{
+    grid-column: img_s/nme;
+    grid-row: deps/depe;
+    padding: 10px;
+}
+
+.employeeArea .employeeCard .empEmail{
+    grid-column: img_s/nme;
+    grid-row: mails/maile;
+    padding: 10px;
+}
+
+#addEmployee{
+    display: block;
+    position: fixed;
+    left: 92%;
+    top: 90vh;
+    color: white;
+    font-size: 25px;
+}
+
+.addEmployee{
+    display: block;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    margin-top: -128px;
+    z-index: 999999999999999;
+}
+
+.addEmployee .close{
+    width: 30px;
+    height: 30px;
+    border: 1px solid black;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    margin-left: 46.5%;
+    margin-top: -110px;
+    color: black;
+    transition: 0.1s all;
+}
+
+.addEmployee .close:hover{
+    border: 1px solid silver;
+    color: silver;
+    cursor: pointer;
+}
+
+.addEmployee .whiteArea{
+    width: 100%;
+    height: 100%;
+    background: rgba(170,170,170,0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.addEmployee .whiteArea .form{
+    width: 50%;
+    height: 50%;
+    padding: 25px;
+    box-shadow: 0px 0px 5px 0px;
+    border-radius: 20px;
+    background: #f9f9f9;
+}
+
+.registered{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    width: 30%;
+    background: #343d9f;
+    height: 150px;
+    color: white;
+    border-radius: 20px;
+    font-size: 25px;
+    margin-left: 9%;
+    margin-top: 9%;
+    box-shadow: -1px 0px 31px 0px;
+}
+
+.selectingForm{
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    display: block;
+    z-index: 9999999;
+    overflow-y: auto;
+}
+
+.selectingForm .close{
+    position: fixed;
+    left: 73%;
+    top: 26%;
+    border: 1px solid silver;
+    width: 30px;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+}
+
+.selectingForm .whiteArea{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(151, 151, 151, 0.6);
+}
+
+.selectingForm .whiteArea .formArea{
+    width: 50%;
+    height: 50%;
+    background: white;
+    overflow-y: auto;
+}
+
+.selectingForm .whiteArea .formArea .link{
+    width: 100%;
+    height: auto;
+    text-decoration: none;
+    float: left;
+    transition: 0.2s all;
+    margin-top:10px;
+    padding: 10px;
+}
+
+.selectingForm .whiteArea .formArea .id{
+    padding: 10px;
+}
+
+.selectingForm .whiteArea .formArea .formItem{
+    border-bottom: 1px solid silver;
+    transition: 0.2s all;
+}
+.selectingForm .whiteArea .formArea .formItem:hover{
+    background: #aaaaaa;
+    color: white;
+}
+
+.profileSetting{
+    position: fixed;
+    width: 150px;
+    height: 150px;
+    border: 1px solid silver;
+    border-radius: 10px;
+    background: #F5F5F5;
+    padding-top: 10px;
+    left: 90%;
+    top: 5%;
+    z-index: 999999999999999999;
+
+}
+
+.profileSetting .links{
+    width: 120px;
+    margin: 12px;
+}
+
+.flowDetails{
+    display: block;
+    position: absolute;
+    width: 80%;
+    height: calc(100vh - 86px);
+    margin-left: 19%;
+    margin-top: -64px;
+    overflow-y: auto;
+    border: 1px solid silver;
+    background: white;
+    border-radius: 10px;
+    box-shadow: -1px 0px 5px 0px;
+}
+
+.flowDetails .close{
+    width: 80%;
+    height: 50px;
+    font-size: 25px;
+    padding-left: 20px;
+    padding-top: 10px;
+}
+
+.flowDetails .close i:hover{
+    color: gray;
+    cursor: pointer;
+}
+
+.schema{
+    width: 100%;
+    height: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.schema .schemaArea{
+    width: 80%;
+    height: 100%;
+    overflow-y: hidden;
+    border-radius: 20px;
+    background: #d6d6d6;
+}
+
+.info{
+    width: 100%;
+    height:54%;
+    display: grid;
+    grid-template-columns: [emps] 25% [empe subs] 50% [sube qs] 25% [qe];
+    grid-template-rows: 1fr;
+}
+
+.info .employees{
+    grid-column: emps/empe;
+    grid-row: 1fr; 
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+.employees .employeesArea{
+    width: 250px;
+    height: 400px;
+    border: 1px solid silver;
+    border-radius: 10px;
+    margin-top: 10px;
+    background: #f9f9f9;
+    overflow-y: auto;
+    padding-left: 10px;
+} 
+
+.employees .employeesArea .employee{
+    width: 90%;
+    height: 40px;
+    border: 1px solid silver;
+    border-radius: 10px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.info .questions{
+    grid-column: qs/qe;
+    grid-row: 1fr;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+.questions .questArea{
+    width: 250px;
+    height: 400px;
+    border: 1px solid silver;
+    border-radius: 10px;
+    margin-top: 10px;
+    background: #f9f9f9;
+    overflow-y: auto;
+    padding-left: 10px;
+}
+
+.questions .questArea .questi{
+    width: 90%;
+    height: 40px;
+    border: 1px solid silver;
+    border-radius: 10px;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.info .submissionCount{
+    grid-column: subs/sube;
+    grid-row: 1fr;
+}
+
+.submissionCount .countArea{
+    width: 80%;
+    height: 40%;
+    border: 1px solid silver;
+    border-radius: 10px;
+    margin-left: 10%;
+    margin-top: 56px;
+    background: #353c9f;
+    color: white;
+    padding-top: 20px
+}
+
+.submissionCount .complete{
+    width: 35%;
+    height: 35%;
+    border: 1px solid silver;
+    border-radius: 10px;
+    margin-left: 10%;
+    margin-top: 20px;
+    float: left;
+    background: #7521a2;
+    padding-top: 40px;
+    color: white;
+}
+
+.submissionCount .inComplete{
+    width: 35%;
+    height: 35%;
+    border: 1px solid silver;
+    border-radius: 10px;
+    margin-left: 10%;
+    margin-top: 20px;
+    float: left;
+    padding-top: 40px;
+    background: #7521a2;
+    color:white;
+}
+
+.card{
+    padding: 20px;
+    font-weight: bolder
+}
+
+.buttons{
+    margin-top: 100px;
+}
+.buttons button{
+    width: 150px;
+    height: 150px;
+    margin: 10px;
+    font-size: 15px;
+}
+
+.container .footer{
+    margin-top: 100px;
+    color: gray;
+}
+

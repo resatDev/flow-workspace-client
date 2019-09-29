@@ -1,0 +1,198 @@
+*{
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  text-decoration: none;
+}
+.loginPopUpJotForm{
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(194, 194, 194, 0.5);
+  z-index: 9999999999999;
+}
+
+.loginPopUpJotForm .wrapJotForm{
+  width: 1100px;
+  height: 800px;
+  display: grid;
+  grid-template-columns: [fs]4fr[fe is] 8fr[ie];
+  grid-auto-rows: 1fr;
+}
+
+.loginPopUpJotForm .wrapJotForm .form{
+  grid-column: fs/fe;
+  grid-row: 1fr;
+  padding: 40px;
+  color: black;
+  background: white;
+}
+
+.loginPopUpJotForm .wrapJotForm .form h5{
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+
+.loginPopUpJotForm .wrapJotForm .form button{
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+
+.loginPopUpJotForm .wrapJotForm .form label, input{
+  color: black;
+}
+
+.loginPopUpJotForm .wrapJotForm .form img{
+  width: 70px;
+  height: 70px;
+  margin-left:40%;
+}
+
+.loginPopUpJotForm .wrapJotForm .form .copyright{
+  color: gray;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 12px;
+}
+
+.loginPopUpJotForm .wrapJotForm .form .copyright a{
+  text-decoration: none;
+  color: gray;
+  transition: 0.2s all;
+}
+
+.loginPopUpJotForm .wrapJotForm .form .copyright a:hover{
+  cursor: pointer;
+  color: black;
+}
+
+.loginPopUpJotForm .wrapJotForm .image{
+  grid-column: is/ie;
+  grid-row: 1fr;
+  background-image: url('https://source.unsplash.com/random');
+  background-repeat: 'no-repeat';
+  background-size: 'cover';
+  background-position: 'center';
+}
+
+.loginPopUpEmployee{
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(194, 194, 194, 0.5);
+  z-index: 9999999999999;
+}
+
+.loginPopUpEmployee .wrapEmployee{
+  width: 1100px;
+  height: 800px;
+  display: grid;
+  grid-template-columns: [is]8fr[ie fs] 4fr[fe];
+  grid-auto-rows: 1fr;
+}
+
+.loginPopUpEmployee .wrapEmployee .form{
+  grid-column: fs/fe;
+  grid-row: 1fr;
+  padding: 40px;
+  color: black;
+  background: white;
+}
+
+.loginPopUpEmployee .wrapEmployee .form h5{
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+
+.loginPopUpEmployee .wrapEmployee .form button{
+  margin-bottom: 30px;
+  margin-top: 30px;
+}
+
+.loginPopUpEmployee .wrapEmployee .form label, input{
+  color: black;
+}
+
+.loginPopUpEmployee .wrapEmployee .form img{
+  width: 70px;
+  height: 70px;
+  margin-left:40%;
+}
+
+.loginPopUpEmployee .wrapEmployee .form .copyright{
+  color: gray;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 12px;
+}
+
+.loginPopUpEmployee .wrapEmployee .form .copyright a{
+  text-decoration: none;
+  color: gray;
+  transition: 0.2s all;
+}
+
+.loginPopUpEmployee .wrapEmployee .form .copyright a:hover{
+  cursor: pointer;
+  color: black;
+}
+
+.loginPopUpEmployee .wrapEmployee .image{
+  grid-column: is/ie;
+  grid-row: 1fr;
+  background-image: url('https://source.unsplash.com/random');
+  background-repeat: 'no-repeat';
+  background-size: 'cover';
+  background-position: 'center';
+}
+
+.loginPopUpJotForm .close{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  color: black;
+  border-radius: 50%;
+  background: white;
+  border-radius: 1px solid silver;
+  margin-left: 97%;
+  margin-top: -10px;
+  transition: 0.2s all;
+}
+
+.loginPopUpEmployee .close{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30px;
+  height: 30px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  color: black;
+  border-radius: 50%;
+  background: white;
+  border-radius: 1px solid silver;
+  margin-left: -1%;
+  margin-top: -10px;
+  transition: 0.2s all;
+}
+
+.close:hover{
+  cursor: pointer;
+}
+
+
+
+
+
+
+
