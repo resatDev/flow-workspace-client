@@ -1,14 +1,14 @@
 import { actionTypes } from "../action/actionTypes";
 
 const initState = {
-    submissions: []
+  submissions: []
 }
 
 export const submissionReducer = (state = initState, action) => {
-    switch (action.type) {
-        case actionTypes.SUBS:
-            return action.submissions
-        default:
-            return state
-    }
+  switch (action.type) {
+  case actionTypes.SUBS:
+    return action.submissions
+  default:
+    return state
+  }
 }

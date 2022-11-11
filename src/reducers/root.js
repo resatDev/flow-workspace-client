@@ -10,12 +10,12 @@ import { combineReducers }from 'redux'
 
 
 export const rootReducer = combineReducers({
-    loadingReducer,
-    eventReducer,
-    loginReducer,
-    flowReducer,
-    formReducer,
-    nodeValueReducer,
-    submissionReducer,
-    employeeReducer
+  loadingReducer,
+  eventReducer,
+  loginReducer,
+  flowReducer,
+  formReducer,
+  nodeValueReducer,
+  submissionReducer,
+  employeeReducer
 })

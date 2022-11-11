@@ -1,14 +1,14 @@
 import { actionTypes } from "../action/actionTypes";
 
 const initState = {
-    forms: []
+  forms: []
 }
 
 export const formReducer = (state = initState, action) => {
-    switch (action.type) {
-        case actionTypes.FORMS:
-            return action.forms
-        default:
-            return state
-    }
+  switch (action.type) {
+  case actionTypes.FORMS:
+    return action.forms
+  default:
+    return state
+  }
 }

@@ -9,14 +9,14 @@ import EmployeePage from './containers/employeePage';
 function App() {
   return (
     <div className="App">
-     <Router>
-       <Route exact path="/" component={landing} />
-       <Route exact path="/login" component={EmployeeLogin} />
-       <Route exact path="/flow-main-page" component={Index} />
-       <Route exact path="/test" component={test}></Route>
-       <Route exact path="/flow/:flow_id" component={FlowBuilder} />
-       <Route exact path="/employee-page" component={EmployeePage} />
-     </Router>
+      <Router>
+        <Route exact path="/" component={landing} />
+        <Route exact path="/login" component={EmployeeLogin} />
+        <Route exact path="/flow-main-page" component={Index} />
+        <Route exact path="/test" component={test}></Route>
+        <Route exact path="/flow/:flow_id" component={FlowBuilder} />
+        <Route exact path="/employee-page" component={EmployeePage} />
+      </Router>
     </div>
   );
 }
