@@ -32,7 +32,8 @@
     "react-select": "^3.0.5"
   },
   "scripts": {
-    "start": "webpack serve --config ./webpack.config.js --mode development --port 3000"
+    "start": "webpack serve --config ./webpack.config.js --mode development --port 3000",
+    "build": "webpack serve"
   },
   "eslintConfig": {
     "extends": "react-app"
